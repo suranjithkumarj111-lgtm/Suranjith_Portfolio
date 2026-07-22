@@ -45,4 +45,4 @@ python run_verification.py --config config.yaml
 
 ## Author
 **Suranjith Kumar J** - Senior SDET-2 | AI-Powered QAOps Engineer  
-[LinkedIn](https://linkedin.com/in/suranjith-kumar-jeppu) | [Portfolio](https://suranjithkumarj111-lgtm.github.io/Suranjith_Projects)
+[LinkedIn](https://linkedin.com/in/suranjith-kumar-jeppu) | [Portfolio](https://suranjithkumarj111-lgtm.github.io/Suranjith_Portfolio)

@@ -120,4 +120,4 @@ jenkins-cli build 'Automation/regression' -p ENV=staging
 
 ## Author
 **Suranjith Kumar J** - Senior SDET-2 | AI-Powered QAOps Engineer  
-[LinkedIn](https://linkedin.com/in/suranjith-kumar-jeppu) | [Portfolio](https://suranjithkumarj111-lgtm.github.io/Suranjith_Projects)
+[LinkedIn](https://linkedin.com/in/suranjith-kumar-jeppu) | [Portfolio](https://suranjithkumarj111-lgtm.github.io/Suranjith_Portfolio)
