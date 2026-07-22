@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subtitle Verification Report</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #0f172a; color: #e2e8f0; padding: 2rem; }
+        .container { max-width: 1100px; margin: 0 auto; }
+        .header { text-align: center; margin-bottom: 2rem; padding: 2rem; background: #1e293b; border-radius: 12px; border: 1px solid #334155; }
+        .header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; }
+        .header .status { font-size: 2.5rem; font-weight: 800; color: #22c55e; margin: 1rem 0; }
+        .header .meta { color: #94a3b8; font-size: 0.9rem; }
+        .section { background: #1e293b; border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #334155; }
+        .section h2 { font-size: 1.3rem; margin-bottom: 1rem; color: #f8fafc; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; }
+        .section h3 { font-size: 1.1rem; margin: 1rem 0 0.5rem; color: #cbd5e1; }
+        .metric-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem; margin-bottom: 1rem; }
+        .metric-card { background: #0f172a; border-radius: 8px; padding: 1rem; text-align: center; border: 1px solid #334155; }
+        .metric-value { font-size: 1.8rem; font-weight: 700; }
+        .metric-label { font-size: 0.8rem; color: #94a3b8; margin-top: 0.3rem; text-transform: uppercase; }
+        table { width: 100%; border-collapse: collapse; margin-top: 0.5rem; }
+        th, td { padding: 0.6rem 1rem; text-align: left; border-bottom: 1px solid #334155; font-size: 0.9rem; }
+        th { color: #94a3b8; font-weight: 600; text-transform: uppercase; font-size: 0.75rem; }
+        .text-green { color: #22c55e; }
+        .text-red { color: #ef4444; }
+        .text-orange { color: #f59e0b; }
+        .text-blue { color: #3b82f6; }
+        .tag { display: inline-block; padding: 0.2rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 600; }
+        .tag-pass { background: #166534; color: #86efac; }
+        .tag-fail { background: #991b1b; color: #fca5a5; }
+        .word-list { font-size: 0.85rem; color: #94a3b8; line-height: 1.8; word-break: break-word; }
+        .word-list span { background: #334155; padding: 0.15rem 0.4rem; border-radius: 3px; margin: 0.1rem; display: inline-block; }
+        .fuzzy-pair { color: #a78bfa; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Subtitle Verification Report</h1>
+            <div class="status">PASSED</div>
+            <div class="meta">
+                <p>Platform: Samsung TV | Project: ATVE</p>
+                <p>Generated: 7/7/2026, 3:18:07 PM</p>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Text Accuracy Match</h2>
+            <div class="metric-grid">
+                <div class="metric-card"><div class="metric-value text-green">94%</div><div class="metric-label">Word Match</div></div>
+                <div class="metric-card"><div class="metric-value text-blue">72%</div><div class="metric-label">Phrase Match</div></div>
+                <div class="metric-card"><div class="metric-value">70%</div><div class="metric-label">Threshold</div></div>
+                <div class="metric-card"><div class="metric-value"><span class="tag tag-pass">PASS</span></div><div class="metric-label">Status</div></div>
+            </div>
+            <h3>Audio → Subtitle (are spoken words in subtitles?)</h3>
+            <table>
+                <tr><th>Type</th><th>Count</th></tr>
+                <tr><td>Exact matches</td><td>80</td></tr>
+                <tr><td>Fuzzy matches</td><td>1</td></tr>
+                <tr><td>Equivalence matches</td><td>0</td></tr>
+                <tr><td><strong>Total</strong></td><td><strong>81 / 86 (94%)</strong></td></tr>
+            </table>
+            <h3>Subtitle → Audio (are subtitle words in audio?)</h3>
+            <table>
+                <tr><th>Type</th><th>Count</th></tr>
+                <tr><td>Exact matches</td><td>109</td></tr>
+                <tr><td>Fuzzy matches</td><td>13</td></tr>
+                <tr><td>Equivalence matches</td><td>0</td></tr>
+                <tr><td><strong>Total</strong></td><td><strong>122 / 172 (71%)</strong></td></tr>
+            </table>
+            <h3>Fuzzy Matches</h3><div class="word-list"><span class="fuzzy-pair">honeymoon ~ one</span> <span class="fuzzy-pair">know ~ now</span> <span class="fuzzy-pair">they ~ them</span> <span class="fuzzy-pair">ren ~ parents</span> <span class="fuzzy-pair">air ~ hair</span> <span class="fuzzy-pair">times ~ sometimes</span> <span class="fuzzy-pair">yeah ~ year</span> <span class="fuzzy-pair">woman ~ man</span> <span class="fuzzy-pair">tell ~ well</span> <span class="fuzzy-pair">knew ~ new</span></div>
+            <h3>Unmatched: Spoken but NOT in subtitles</h3><div class="word-list"><span>with</span> <span>keys</span> <span>while</span> <span>still</span> <span>havent</span></div>
+            <h3>Unmatched: In subtitles but NOT spoken</h3><div class="word-list"><span>people</span> <span>dont</span> <span>transgender</span> <span>jay</span> <span>feel</span> <span>would</span> <span>see</span> <span>could</span> <span>just</span> <span>give</span> <span>chance</span> <span>honored</span> <span>pronounce</span> <span>husband</span> <span>wife</span> <span>rene</span> <span>turning</span> <span>pamela</span> <span>put</span> <span>glass</span> <span>celebrate</span> <span>good</span> <span>living</span> <span>big</span> <span>lines</span> <span>how</span> <span>boy</span> <span>adopted</span> <span>yes</span> <span>already</span> <span>aw</span> <span>why</span> <span>bed</span> <span>best</span> <span>friend</span> <span>jake</span></div>
+        </div>
+        
+        <div class="section">
+            <h2>Audio-Subtitle Sync Verification</h2>
+            <div class="metric-grid">
+                <div class="metric-card"><div class="metric-value text-green">93.3%</div><div class="metric-label">Sync Rate</div></div>
+                <div class="metric-card"><div class="metric-value">&plusmn;2s</div><div class="metric-label">Tolerance</div></div>
+                <div class="metric-card"><div class="metric-value">0.89s</div><div class="metric-label">Avg Delay</div></div>
+                <div class="metric-card"><div class="metric-value">8.29s</div><div class="metric-label">Max Delay</div></div>
+            </div>
+            <table>
+                <tr><th>Status</th><th>Count</th></tr>
+                <tr><td>In Sync</td><td class="text-green">28</td></tr>
+                <tr><td>Late</td><td class="text-red">1</td></tr>
+                <tr><td>Early</td><td class="text-orange">1</td></tr>
+                <tr><td>No Match</td><td>6</td></tr>
+            </table>
+            
+            <h3>Out-of-Sync Details</h3>
+            <table>
+                <tr><th>Subtitle</th><th>Appeared At</th><th>Spoken At</th><th>Delay</th><th>Status</th></tr>
+                
+                <tr><td>love Jay, and feel like they would see what see...</td><td>348s</td><td>350.25s</td><td>2.25s</td><td class="text-orange">EARLY</td></tr>
+                <tr><td>And celebrate all the good times...</td><td>383s</td><td>374.71s</td><td>8.29s</td><td class="text-red">LATE</td></tr>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Industry Quality Checks (Broadcast Standards)</h2>
+            <div class="metric-grid">
+                <div class="metric-card"><div class="metric-value text-green">97.2%</div><div class="metric-label">Line Length</div></div>
+                <div class="metric-card"><div class="metric-value text-green">100%</div><div class="metric-label">Gap Compliance</div></div>
+                <div class="metric-card"><div class="metric-value text-green">86.4%</div><div class="metric-label">Reading Speed</div></div>
+            </div>
+            <h3>Line Length (max 60 chars/line)</h3>
+            <table>
+                <tr><th>Total Lines</th><th>Passed</th><th>Violations</th><th>Compliance</th></tr>
+                <tr><td>36</td><td>35</td><td class="text-red">1</td><td class="text-green">97.2%</td></tr>
+            </table>
+            <div class="word-list" style="margin-top:0.5rem;"><span class="text-orange">"Woman don't know how to tell you this, but... Boy That I'm a" (105 chars @407s)</span></div>
+            <h3>Gap Detection (max 3s gap)</h3>
+            <table>
+                <tr><th>Transitions</th><th>Gaps Found</th><th>Compliance</th></tr>
+                <tr><td>35</td><td class="">0</td><td class="text-green">100%</td></tr>
+            </table>
+            
+            <h3>Reading Speed (max 40 chars/sec)</h3>
+            <table>
+                <tr><th>Total Subtitles</th><th>Passed</th><th>Too Fast</th><th>Compliance</th></tr>
+                <tr><td>22</td><td>19</td><td class="text-red">3</td><td class="text-green">86.4%</td></tr>
+            </table>
+            <div class="word-list" style="margin-top:0.5rem;"><span class="text-red">"Pamela Oh, baby, we're not going out yet, my love." (50 cps, 1s)</span> <span class="text-red">"Pamela I'm excited for your parents to come over." (49 cps, 1s)</span> <span class="text-red">"I'm excited why they're coming over so we can get " (54 cps, 1s)</span></div>
+        </div>
+        <div class="section" style="text-align:center; color:#64748b; font-size:0.8rem;">
+            <p>Subtitle Verification POC — GQA Automation</p>
+        </div>
+    </div>
+</body>
+</html>
