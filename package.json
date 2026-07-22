@@ -1,0 +1,12 @@
+{
+  "name": "suranjith-kumar-portfolio",
+  "version": "1.0.0",
+  "description": "Professional Portfolio - Suranjith Kumar J | Senior SDET-2 | AI-Powered QAOps Engineer",
+  "scripts": {
+    "dev": "npx live-server --port=3000",
+    "start": "npx http-server -p 3000"
+  },
+  "keywords": ["portfolio", "SDET", "QAOps", "AI Testing", "automation"],
+  "author": "Suranjith Kumar J",
+  "license": "MIT"
+}
