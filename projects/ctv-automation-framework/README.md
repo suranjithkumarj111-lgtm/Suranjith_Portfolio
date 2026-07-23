@@ -1,7 +1,7 @@
 # CTV Multi-Platform Automation Framework
 
 ## Overview
-A comprehensive automation framework for Connected TV (CTV) platforms including Samsung TV (Tizen), LG TV (WebOS), Fire TV, and Android TV. Built for the Disney+ streaming platform at GlobalLogic.
+A comprehensive automation framework for Connected TV (CTV) platforms including Samsung TV (Tizen), LG TV (WebOS), Fire TV, and Android TV. Built for the Discovery Plus (D+) streaming platform at GlobalLogic.
 
 ## Problem Statement
 Testing streaming applications across multiple CTV platforms required separate tooling, different protocols, and extensive manual validation. There was no unified approach to automate tests across all platforms.

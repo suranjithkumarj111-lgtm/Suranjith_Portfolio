@@ -1,7 +1,7 @@
 # AI-Driven Subtitle Verification Engine
 
 ## Overview
-An AI-powered automation system for verifying subtitle accuracy, timing, and synchronization across streaming platforms. This POC resolved critical blockers in the automation testing pipeline and accelerated project delivery at GlobalLogic (Disney+ Team).
+An AI-powered automation system for verifying subtitle accuracy, timing, and synchronization across streaming platforms. This POC resolved critical blockers in the automation testing pipeline and accelerated project delivery at GlobalLogic (Discovery Plus D+ Team).
 
 ## Problem Statement
 Manual subtitle verification across multiple streaming platforms was time-consuming, error-prone, and couldn't scale with the volume of content being released.

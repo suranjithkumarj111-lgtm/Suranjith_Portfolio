@@ -1,7 +1,7 @@
-# Xbox STBT Automation (Disney+)
+# Xbox STBT Automation (Discovery Plus)
 
 ## Overview
-Python-based test automation for Xbox console testing using the STBT (Stb-tester) framework. Automates visual-based testing for the Disney+ streaming application on gaming consoles.
+Python-based test automation for Xbox console testing using the STBT (Stb-tester) framework. Automates visual-based testing for the Discovery Plus (D+) streaming application on gaming consoles.
 
 ## Problem Statement
 Xbox gaming console testing for streaming applications required visual validation approaches since traditional DOM-based automation isn't possible on console platforms.
@@ -29,10 +29,10 @@ Utilized STBT (Set-top Box Tester) framework with Python to implement image-reco
 ```python
 import stbt
 
-def test_disney_plus_launch():
-    """Verify Disney+ app launches successfully on Xbox"""
+def test_discovery_plus_launch():
+    """Verify Discovery Plus app launches successfully on Xbox"""
     stbt.press("xbox_button")
-    stbt.wait_for_match("images/disney_plus_icon.png", timeout_secs=10)
+    stbt.wait_for_match("images/discovery_plus_icon.png", timeout_secs=10)
     stbt.press("a_button")
     assert stbt.wait_for_match("images/home_screen.png", timeout_secs=15)
 
